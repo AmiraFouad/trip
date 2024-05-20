@@ -1,0 +1,50 @@
+body{
+}
+
+/* for the logo */
+.navbar img {
+  width: 100px;
+  height: auto;
+}
+
+/* for social media icons */
+.facebook, .twitter{
+  width: 45px;
+  height: auto;
+}
+
+.instagram {
+  width: 33px;
+  height: auto;
+}
+
+/* welome/Home */
+.welcome-home {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+}
+
+.welcome-home img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Text color */
+  background: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background */
+  padding: 10px; /* Add padding around the text */
+  border-radius: 5px; /* Optional: Add rounded corners */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out; /* Transition effect */
+}
+
+.welcome-home:hover .text-overlay {
+  opacity: 1; /* Show the text on hover */
+}
