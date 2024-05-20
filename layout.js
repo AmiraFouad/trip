@@ -2,7 +2,7 @@
 function insertNavbar() {
     const navbarContent = `
         <nav class="navbar navbar-expand-md navbar-light bg-light">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="index.html">
                 <img src="media/logo.jpeg" id="logo" alt="Logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -12,7 +12,7 @@ function insertNavbar() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="home.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="deals.html">Deals</a>
