@@ -1,4 +1,5 @@
 body{
+  background-color: white;
 }
 
 /* for the logo */
@@ -7,16 +8,15 @@ body{
   height: auto;
 }
 
+.navbar {
+  background-color: white;
+}
 /* for social media icons */
 .facebook, .twitter{
   width: 45px;
   height: auto;
 }
 
-.instagram {
-  width: 33px;
-  height: auto;
-}
 
 /* welome/Home */
 .welcome-home {
@@ -47,4 +47,93 @@ body{
 
 .welcome-home:hover .text-overlay {
   opacity: 1; /* Show the text on hover */
+}
+
+/* for the slideshow*/
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slideshow-slide {
+    display: none;
+    position: relative;
+}
+
+.slideshow-img {
+    width: 100%;
+    height: auto;
+}
+
+.deal-details {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.more-details {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.deal-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+}
+
+.deal-card img {
+    width: 100%;
+    height: auto;
+}
+
+.deal-card .deal-details {
+    font-size: 1.2em;
+    margin-top: 8px;
+}
+
+.deal-card .more-details {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+}
+
+.deal-card .more-details:hover {
+    background-color: #0056b3;
 }
