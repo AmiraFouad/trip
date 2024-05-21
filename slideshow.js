@@ -21,7 +21,10 @@ function generateSlides(deals) {
     wrapper.className = 'slideshow-wrapper';
     container.appendChild(wrapper);
 
-    deals.forEach(deal => {
+    // Duplicate first few deals to simulate infinite loop
+    var extendedDeals = [...deals, ...deals.slice(0, 2)];
+
+    extendedDeals.forEach(deal => {
         var slide = document.createElement('div');
         slide.className = 'slideshow-slide';
 
@@ -48,6 +51,10 @@ function generateSlides(deals) {
         slide.appendChild(link);
         wrapper.appendChild(slide);
     });
+
+    // Set initial position to show the first 3 slides correctly
+    var initialOffset = -100 / 3;
+    wrapper.style.transform = 'translateX(' + initialOffset + '%)';
 }
 
 function startSlideshow() {
@@ -60,14 +67,30 @@ function moveSlides(n) {
     var slides = document.getElementsByClassName("slideshow-slide");
     slideIndex += n;
 
-    // Handle circular movement
-    if (slideIndex >= slides.length) {
+    var wrapper = document.querySelector('.slideshow-wrapper');
+
+    if (slideIndex >= slides.length - 2) {
         slideIndex = 0;
+        wrapper.style.transition = 'none'; // Disable transition
+        var offset = -100 / 3;
+        wrapper.style.transform = 'translateX(' + offset + '%)';
+
+        // Force reflow
+        wrapper.offsetHeight;
+        wrapper.style.transition = 'transform 0.5s ease';
+        slideIndex++;
     } else if (slideIndex < 0) {
-        slideIndex = slides.length - 1;
+        slideIndex = slides.length - 4;
+        wrapper.style.transition = 'none'; // Disable transition
+        var offset = -(slideIndex * 100 / 3);
+        wrapper.style.transform = 'translateX(' + offset + '%)';
+
+        // Force reflow
+        wrapper.offsetHeight;
+        wrapper.style.transition = 'transform 0.5s ease';
+        slideIndex--;
     }
 
-    var wrapper = document.querySelector('.slideshow-wrapper');
     var offset = -(slideIndex * 100 / 3);
     wrapper.style.transform = 'translateX(' + offset + '%)';
 
