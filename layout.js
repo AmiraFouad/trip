@@ -1,7 +1,7 @@
 // Function to insert the navigation bar and logo
 function insertNavbar() {
     const navbarContent = `
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light">
             <a class="navbar-brand" href="index.html">
                 <img src="media/logo.jpeg" id="logo" alt="Logo">
             </a>
