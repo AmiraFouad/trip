@@ -9,13 +9,16 @@ function fetchDeals() {
         .then(response => response.json())
         .then(data => {
             generateSlides(data);
-            showSlides();
+            setInterval(() => moveSlides(1), 3000); // Automatically move right every 3 seconds
         })
         .catch(error => console.error('Error fetching deals:', error));
 }
 
 function generateSlides(deals) {
     var container = document.getElementById('slideshow-container');
+    var wrapper = document.createElement('div');
+    wrapper.className = 'slideshow-wrapper';
+    container.appendChild(wrapper);
 
     deals.forEach(deal => {
         var slide = document.createElement('div');
@@ -38,22 +41,21 @@ function generateSlides(deals) {
         slide.appendChild(img);
         slide.appendChild(details);
         slide.appendChild(moreDetails);
-        container.appendChild(slide);
+        wrapper.appendChild(slide);
     });
 }
 
-function showSlides() {
-    var slides = document.getElementsByClassName("slideshow-slide");
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; }
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-
 function moveSlides(n) {
-    slideIndex += n - 1;
-    showSlides();
+    var slides = document.getElementsByClassName("slideshow-slide");
+    slideIndex += n;
+
+    if (slideIndex > slides.length - 3) { // Loop back to the start
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 3;
+    }
+
+    var wrapper = document.querySelector('.slideshow-wrapper');
+    var offset = -(slideIndex * 100 / 3);
+    wrapper.style.transform = 'translateX(' + offset + '%)';
 }
