@@ -1,7 +1,9 @@
 var slideIndex = 0;
+var slideInterval;
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchDeals();
+    startSlideshow();
 });
 
 function fetchDeals() {
@@ -9,7 +11,6 @@ function fetchDeals() {
         .then(response => response.json())
         .then(data => {
             generateSlides(data);
-            setInterval(() => moveSlides(1), 3000); // Automatically move right every 3 seconds
         })
         .catch(error => console.error('Error fetching deals:', error));
 }
@@ -49,11 +50,17 @@ function generateSlides(deals) {
     });
 }
 
+function startSlideshow() {
+    slideInterval = setInterval(() => moveSlides(1), 3000); // Automatically move right every 3 seconds
+}
+
 function moveSlides(n) {
-    var slides = document.getElementsByClassName("slideshow-slide");
+    clearInterval(slideInterval);
     slideIndex += n;
 
-    if (slideIndex > slides.length - 3) { // Loop back to the start
+    var slides = document.getElementsByClassName("slideshow-slide");
+
+    if (slideIndex >= slides.length - 2) { // Loop back to the start
         slideIndex = 0;
     } else if (slideIndex < 0) {
         slideIndex = slides.length - 3;
@@ -62,4 +69,6 @@ function moveSlides(n) {
     var wrapper = document.querySelector('.slideshow-wrapper');
     var offset = -(slideIndex * 100 / 3);
     wrapper.style.transform = 'translateX(' + offset + '%)';
+    
+    startSlideshow();
 }
