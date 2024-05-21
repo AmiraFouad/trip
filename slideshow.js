@@ -38,7 +38,7 @@ function generateSlides(deals) {
 
         var moreDetails = document.createElement('span');
         moreDetails.className = 'more-details';
-        moreDetails.innerText = 'More Details';
+        moreDetails.innerText = 'المزيد';
 
         link.appendChild(img);
         link.appendChild(details);
