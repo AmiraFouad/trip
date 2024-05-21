@@ -3,7 +3,6 @@ var slideInterval;
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchDeals();
-    startSlideshow();
 });
 
 function fetchDeals() {
@@ -11,6 +10,7 @@ function fetchDeals() {
         .then(response => response.json())
         .then(data => {
             generateSlides(data);
+            startSlideshow();
         })
         .catch(error => console.error('Error fetching deals:', error));
 }
@@ -60,10 +60,8 @@ function moveSlides(n) {
 
     var slides = document.getElementsByClassName("slideshow-slide");
 
-    if (slideIndex >= slides.length - 2) { // Loop back to the start
+    if (slideIndex >= slides.length) {
         slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = slides.length - 3;
     }
 
     var wrapper = document.querySelector('.slideshow-wrapper');
