@@ -1,8 +1,8 @@
-body{
+body {
   background-color: white;
 }
 
-/* for the logo */
+/* Navbar */
 .navbar img {
   width: 100px;
   height: auto;
@@ -11,14 +11,14 @@ body{
 .navbar {
   background-color: white;
 }
-/* for social media icons */
-.facebook, .twitter{
+
+/* Social Media Icons */
+.facebook, .twitter {
   width: 45px;
   height: auto;
 }
 
-
-/* welome/Home */
+/* Welcome/Home */
 .welcome-home {
   position: relative;
   width: 100%;
@@ -49,91 +49,96 @@ body{
   opacity: 1; /* Show the text on hover */
 }
 
-/* for the slideshow*/
+/* Slideshow */
 .slideshow-container {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slideshow-slide {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
+  float: left;
+  width: 33.33%; /* Three items per row */
+  box-sizing: border-box;
 }
 
 .slideshow-img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure images cover the area without distortion */
 }
 
 .deal-details {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
 }
 
 .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 20px;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    z-index: 1000;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  z-index: 1000;
 }
 
 .arrow-left {
-    left: 0;
+  left: 0;
 }
 
 .arrow-right {
-    right: 0;
+  right: 0;
 }
 
 .more-details {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 10px;
-    text-decoration: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-decoration: none;
 }
 
 .deal-card {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 16px;
-    text-align: center;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
 }
 
 .deal-card img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .deal-card .deal-details {
-    font-size: 1.2em;
-    margin-top: 8px;
+  font-size: 1.2em;
+  margin-top: 8px;
 }
 
 .deal-card .more-details {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
 }
 
 .deal-card .more-details:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
