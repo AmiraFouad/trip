@@ -1,20 +1,20 @@
 [
     {
-        "image": "media\Sharm El Sheikh.jpg",
+        "image": "media\\Sharm El Sheikh.jpg",
         "destination": "Sharm El Sheikh",
         "hotel": "Hotel A",
         "price": "$200",
         "link": "deal1.html"
     },
     {
-        "image": "media\Hurghada.jpg",
+        "image": "media\\Hurghada.jpg",
         "destination": "Hurghada",
         "hotel": "Hotel B",
         "price": "$250",
         "link": "deal2.html"
     },
     {
-        "image": "media\Safari.jpg",
+        "image": "media\\Safari.jpg",
         "destination": "Safari",
         "hotel": "Hotel C",
         "price": "$150",
