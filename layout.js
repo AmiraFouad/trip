@@ -12,16 +12,16 @@ function insertNavbar() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="deals.html">Deals</a>
+                        <a class="nav-link" href="deals.html">العروض</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About Us</a>
+                        <a class="nav-link" href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
             </div>
@@ -38,17 +38,17 @@ function insertFooter() {
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h5>About Us</h5>
-                        <p>تقدم شركتنا أفضل عروض السياحة داخل مصر وخارجها. نحن نقدم أفضل الفنادق والمنتجعات وحجز تذاكر الطيران بأسعار مناسبة. اكتشف أجمل المناطق في القاهرة، الأقصر، شرم الشيخ، والغردقة. استمتع بعروض لا تقاوم، احجز إجازتك اليوم.</p>
+                        <h5>من نحن</h5>
+                        <p>تقدم شركتنا أفضل عروض السياحة داخل مصر وخارجها. نحن نقدم أفضل الفنادق والمنتجعات وحجز تذاكر الطيران بأسعار مناسبة. اكتشف أجمل المناطق في القاهرة، الأقصر، شرم الشيخ، والغردقة. استمتع بعروض لا تقاوم، احجز إجازتك اليوم</p>
                     </div>
                     <div class="col-md-4">
-                        <h5>Follow Us</h5>
+                        <h5>تابعنا</h5>
                         <a href="https://www.facebook.com" target="_blank">
                             <img src="media/facebook-icon.png" alt="Facebook" class="facebook">
                         </a>
                     </div>
                     <div class="col-md-4">
-                        <h5>Contact Us</h5>
+                        <h5>اتصل بنا</h5>
                         <p>Email: Info@perfecto-holiday.com</p>
                         <p>Phone: (+20) 10-0501-8712</p>
                     </div>
