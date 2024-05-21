@@ -13,20 +13,20 @@ body {
 }
 
 /* Social Media Icons */
-.facebook, .twitter {
+.facebook {
   width: 45px;
   height: auto;
 }
 
-/* Welcome/Home */
-.welcome-home {
+/* banners */
+.welcome-home .about-banner {
   position: relative;
   width: 100%;
   max-width: 100%;
   margin: auto;
 }
 
-.welcome-home img {
+.welcome-home img .about-banner img{
   width: 100%;
   height: auto;
 }
