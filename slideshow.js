@@ -24,6 +24,10 @@ function generateSlides(deals) {
         var slide = document.createElement('div');
         slide.className = 'slideshow-slide';
 
+        var link = document.createElement('a');
+        link.href = deal.link;
+        link.className = 'slide-link';
+
         var img = document.createElement('img');
         img.className = 'slideshow-img';
         img.src = deal.image;
@@ -33,14 +37,14 @@ function generateSlides(deals) {
         details.className = 'deal-details';
         details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p>`;
 
-        var moreDetails = document.createElement('a');
+        var moreDetails = document.createElement('span');
         moreDetails.className = 'more-details';
-        moreDetails.href = deal.link;
         moreDetails.innerText = 'More Details';
 
-        slide.appendChild(img);
-        slide.appendChild(details);
-        slide.appendChild(moreDetails);
+        link.appendChild(img);
+        link.appendChild(details);
+        link.appendChild(moreDetails);
+        slide.appendChild(link);
         wrapper.appendChild(slide);
     });
 }
