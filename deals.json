@@ -3,28 +3,28 @@
         "image": "media\\Sharm El Sheikh.jpg",
         "destination": "شرم الشيخ",
         "hotel": "انتركونتننتال",
-        "price": "200 جنية الليلة",
+        "price": "بـ 250 جنيه",
         "link": "deals\\deal1.html"
     },
     {
         "image": "media\\Hurghada.jpg",
-        "destination": "الغردقة",
+        "destination": "الغردقه",
         "hotel": "تيوليب",
-        "price": "250 جنية اللية",
+        "price": "بـ 300 جنيه",
         "link": "deals\\deal2.html"
     },
     {
         "image": "media\\Safari.jpg",
         "destination": "سفاري",
         "hotel": "جبل سانت كاترين",
-        "price": "150 جنيه الفرد",
+        "price": "بـ 300 جنيه",
         "link": "deals\\deal3.html"
     },
     {
         "image": "media\\Aswan.jpg",
         "destination": "اسوان",
         "hotel": "ماريوت",
-        "price": "300 جنيه الليلة",
+        "price": "بـ 500 جنيه",
         "link": "deals\\deal4.html"
     }
 ]
