@@ -53,6 +53,8 @@ body {
   position: relative;
   max-width: 100%;
   overflow: hidden;
+  padding: 10px; /* Added padding for container */
+  background-color: #f8f8f8; /* Background color for container */
 }
 
 .slideshow-wrapper {
@@ -64,20 +66,27 @@ body {
   display: none;
   width: 33.33%;
   box-sizing: border-box;
+  padding: 10px; /* Added padding for each slide */
+  margin: 5px; /* Added margin for each slide */
+  background-color: #fff; /* Background color for each slide */
+  border: 1px solid #ddd; /* Border for each slide */
+  border-radius: 5px; /* Rounded corners for each slide */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Box shadow for each slide */
 }
 
 .slideshow-img {
   width: 100%;
-  height: 300px; /* Set a fixed height for uniformity */
+  height: 200px; /* Set a fixed height for uniformity */
   object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 5px; /* Rounded corners for the image */
 }
 
 .deal-details {
-  position: absolute;
+  position: relative; /* Changed from absolute to relative */
   bottom: 0;
   left: 0;
   width: 100%;
-  color: #fff;
+  color: #333; /* Text color */
   padding: 10px;
   text-align: center;
   border-radius: 5px;
