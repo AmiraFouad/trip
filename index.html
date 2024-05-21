@@ -21,17 +21,26 @@
 <!-- header: includes navbar and logo from the js file-->
     <div id="header"></div>
     <!-- welcome -->
-    <div class="welcome-home">
+    <div lang= "en" class="welcome-home">
       <img src="media\pic1.jpg" alt="A picture of the Nile">
       <div class="text-overlay">
         <h2>Welcome to Perfecto Holidays</h2>
         <p>Find your next perfect trip with us</p>
       </div>
     </div>
+  <!-- the image slidshow for deals -->
+    <div class="slideshow-container" id="slideshow-container">
+    <!-- Arrow buttons -->
+      <div class="arrow arrow-left" onclick="moveSlides(-1)">&#10094;</div>
+      <div class="arrow arrow-right" onclick="moveSlides(1)">&#10095;</div>
+    </div>
+
+<script src="slideshow.js"></script>
 
 
     <div id="footer"></div>
 
     <script src="layout.js"></script>
+    <script src="slideshow.js"></script>
   </body>
 </html>
