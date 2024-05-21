@@ -29,7 +29,7 @@ function generateDealCards(deals) {
         var moreDetails = document.createElement('a');
         moreDetails.className = 'more-details';
         moreDetails.href = deal.link;
-        moreDetails.innerText = 'More Details';
+        moreDetails.innerText = 'المزيد';
 
         card.appendChild(img);
         card.appendChild(details);
