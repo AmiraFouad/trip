@@ -53,15 +53,18 @@ body {
 .slideshow-container {
   position: relative;
   max-width: 100%;
-  margin: auto;
   overflow: hidden;
+  white-space: nowrap;
+}
+
+.slideshow-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
 }
 
 .slideshow-slide {
-  display: none;
-  position: relative;
-  float: left;
-  width: 33.33%; /* Three items per row */
+  display: inline-block;
+  width: 33.33%;
   box-sizing: border-box;
 }
 
