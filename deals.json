@@ -1,9 +1,9 @@
 [
     {
         "image": "media\\Sharm El Sheikh.jpg",
-        "destination": "Sharm El Sheikh",
-        "hotel": "Hotel A",
-        "price": "$200",
+        "destination": "شرم الشيخ",
+        "hotel": "انتركونتننتال",
+        "price": "200 جنية الليلة",
         "link": "deals\\deal1.html"
     },
     {
