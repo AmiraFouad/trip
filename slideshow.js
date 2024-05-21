@@ -1,9 +1,7 @@
 var slideIndex = 0;
-var slideInterval;
 
 document.addEventListener("DOMContentLoaded", function() {
     fetchDeals();
-    startSlideshow();
 });
 
 function fetchDeals() {
@@ -21,10 +19,7 @@ function generateSlides(deals) {
     wrapper.className = 'slideshow-wrapper';
     container.appendChild(wrapper);
 
-    // Duplicate first few deals to simulate infinite loop
-    var extendedDeals = [...deals, ...deals.slice(0, 2)];
-
-    extendedDeals.forEach(deal => {
+    deals.forEach(deal => {
         var slide = document.createElement('div');
         slide.className = 'slideshow-slide';
 
@@ -52,48 +47,35 @@ function generateSlides(deals) {
         wrapper.appendChild(slide);
     });
 
-    // Set initial position to show the first 3 slides correctly
-    var initialOffset = -100 / 3;
-    wrapper.style.transform = 'translateX(' + initialOffset + '%)';
+    showSlides(slideIndex); // Initialize the slide position
 }
 
-function startSlideshow() {
-    slideInterval = setInterval(() => moveSlides(1), 3000); // Automatically move right every 3 seconds
+function showSlides(n) {
+    var slides = document.getElementsByClassName("slideshow-slide");
+    var totalSlides = slides.length;
+
+    // Hide all slides initially
+    for (var i = 0; i < totalSlides; i++) {
+        slides[i].style.display = "none";
+    }
+
+    // Show the current set of slides (3 slides)
+    for (var i = 0; i < 3; i++) {
+        var index = (n + i) % totalSlides;
+        slides[index].style.display = "block";
+    }
 }
 
 function moveSlides(n) {
-    clearInterval(slideInterval);
-
-    var slides = document.getElementsByClassName("slideshow-slide");
     slideIndex += n;
+    var slides = document.getElementsByClassName("slideshow-slide");
+    var totalSlides = slides.length;
 
-    var wrapper = document.querySelector('.slideshow-wrapper');
-
-    if (slideIndex >= slides.length - 2) {
+    if (slideIndex >= totalSlides) {
         slideIndex = 0;
-        wrapper.style.transition = 'none'; // Disable transition
-        var offset = -100 / 3;
-        wrapper.style.transform = 'translateX(' + offset + '%)';
-
-        // Force reflow
-        wrapper.offsetHeight;
-        wrapper.style.transition = 'transform 0.5s ease';
-        slideIndex++;
     } else if (slideIndex < 0) {
-        slideIndex = slides.length - 4;
-        wrapper.style.transition = 'none'; // Disable transition
-        var offset = -(slideIndex * 100 / 3);
-        wrapper.style.transform = 'translateX(' + offset + '%)';
-
-        // Force reflow
-        wrapper.offsetHeight;
-        wrapper.style.transition = 'transform 0.5s ease';
-        slideIndex--;
+        slideIndex = totalSlides - 1;
     }
 
-    var offset = -(slideIndex * 100 / 3);
-    wrapper.style.transform = 'translateX(' + offset + '%)';
-
-    // Reset the interval to keep the automatic sliding
-    startSlideshow();
+    showSlides(slideIndex);
 }
