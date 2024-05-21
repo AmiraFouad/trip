@@ -8,23 +8,23 @@
     },
     {
         "image": "media\\Hurghada.jpg",
-        "destination": "Hurghada",
-        "hotel": "Hotel B",
-        "price": "$250",
+        "destination": "الغردقة",
+        "hotel": "تيوليب",
+        "price": "250 جنية اللية",
         "link": "deals\\deal2.html"
     },
     {
         "image": "media\\Safari.jpg",
-        "destination": "Safari",
-        "hotel": "Hotel C",
-        "price": "$150",
+        "destination": "سفاري",
+        "hotel": "جبل سانت كاترين",
+        "price": "150 جنيه الفرد",
         "link": "deals\\deal3.html"
     },
     {
         "image": "media\\Aswan.jpg",
-        "destination": "Aswan",
-        "hotel": "Hotel D",
-        "price": "$150",
+        "destination": "اسوان",
+        "hotel": "ماريوت",
+        "price": "300 جنيه الليلة",
         "link": "deals\\deal4.html"
     }
 ]
