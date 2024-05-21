@@ -15,7 +15,7 @@ function insertNavbar() {
                         <a class="nav-link" href="index.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="deals.html">العروض</a>
+                        <a class="nav-link" href="deals.html">عروضنا</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">من نحن</a>
