@@ -39,7 +39,7 @@ function insertFooter() {
                 <div class="row">
                     <div class="col-md-4">
                         <h5>About Us</h5>
-                        <p>Learn more about our company and what we do.</p>
+                        <p>تقدم شركتنا أفضل عروض السياحة داخل مصر وخارجها. نحن نقدم أفضل الفنادق والمنتجعات وحجز تذاكر الطيران بأسعار مناسبة. اكتشف أجمل المناطق في القاهرة، الأقصر، شرم الشيخ، والغردقة. استمتع بعروض لا تقاوم، احجز إجازتك اليوم.</p>
                     </div>
                     <div class="col-md-4">
                         <h5>Follow Us</h5>
