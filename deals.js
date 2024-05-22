@@ -24,8 +24,14 @@ function generateDealCards(deals) {
 
         var details = document.createElement('div');
         details.className = 'deal-details';
-        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p><a href="${deal.link}" class="more-details">المزيد</a>`;
+        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p>`;
 
+        var moreDetailsLink = document.createElement('a');
+        moreDetailsLink.href = deal.link;
+        moreDetailsLink.className = 'more-details';
+        moreDetailsLink.innerText = 'المزيد';
+
+        details.appendChild(moreDetailsLink);
         card.appendChild(img);
         card.appendChild(details);
         container.appendChild(card);
