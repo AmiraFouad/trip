@@ -12,7 +12,7 @@ body {
   background-color: white;
 }
 
-/* Footer */
+/* footer */
 .footer {
   background-color: white;
 }
@@ -23,10 +23,10 @@ body {
   height: auto;
 }
 
-/* Banners */
+/* banners */
 .home-banner,
-.about-banner,
-.contact-banner,
+.about-bannerو
+.contact-bannerو
 .deals-banner {
   position: relative;
   width: 100%;
@@ -60,8 +60,8 @@ body {
   position: relative;
   max-width: 100%;
   overflow: hidden;
-  padding: 10px;
-  background-color: #f8f8f8;
+  padding: 10px; /* Added padding for container */
+  background-color: #f8f8f8; /* Background color for container */
 }
 
 .slideshow-wrapper {
@@ -70,84 +70,54 @@ body {
 }
 
 .slideshow-slide {
-  flex: 0 0 33.33%;
+  display: none;
+  width: 33.33%;
   box-sizing: border-box;
-  padding: 10px;
-  margin: 5px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
+  padding: 10px; /* Added padding for each slide */
+  margin: 5px; /* Added margin for each slide */
+  background-color: #fff; /* Background color for each slide */
+  border: 1px solid #ddd; /* Border for each slide */
+  border-radius: 5px; /* Rounded corners for each slide */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Box shadow for each slide */
 }
 
 .slideshow-img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover; /* Ensure images cover the area without distortion */
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+.deal-details {
+  position: relative; /* Changed from absolute to relative */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #333; /* Text color */
+  padding: 10px;
+  text-align: center;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .more-details {
-  display: block;
+  display: inline-block;
   margin-top: 8px;
   padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* Deals page specific styles */
-#deals-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.more-details:hover {
+  background-color: #0056b3;
 }
 
-.deal-card {
-  width: calc(33.33% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative;
-}
-
-.deal-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.deal-details {
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.deal-card .more-details {
-  align-self: center;
-}
-
-@media (max-width: 768px) {
-  .deal-card {
-    width: calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .deal-card {
-    width: calc(100% - 20px);
-  }
-}
-
-/* Arrows for slideshow */
 .arrow {
   position: absolute;
   top: 50%;
@@ -166,4 +136,62 @@ body {
 
 .arrow-right {
   right: 0;
+}
+
+/* Deals Page */
+.deals-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.deal-card {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  text-align: center;
+  width: calc(33.33% - 32px); /* Adjusted width with margin */
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 5px; /* Rounded corners for each deal card */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Box shadow for each deal card */
+}
+
+.deal-card img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for uniformity */
+  object-fit: cover;
+  border-radius: 5px; /* Rounded corners for the image */
+}
+
+.deal-card .deal-details {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.deal-card .more-details {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .deal-card {
+    width: calc(50% - 32px); /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .deal-card {
+    width: calc(100% - 32px); /* Adjust width for mobile screens */
+  }
 }
