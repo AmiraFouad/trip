@@ -26,7 +26,7 @@ body {
   margin: auto;
 }
 
-.welcome-home img .about-banner img{
+.home-banner img .about-banner img{
   width: 100%;
   height: auto;
 }
@@ -44,7 +44,7 @@ body {
   opacity: 0;
 }
 
-.welcome-home:hover .text-overlay {
+.home-banner:hover .text-overlay {
   opacity: 1;
 }
 
