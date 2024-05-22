@@ -70,7 +70,6 @@ body {
 }
 
 .slideshow-slide {
-  display: none;
   flex: 0 0 33.33%;
   box-sizing: border-box;
   padding: 10px;
@@ -79,6 +78,7 @@ body {
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .slideshow-img {
