@@ -184,6 +184,17 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.more-details {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .deal-card {
     width: calc(50% - 32px); /* Adjust width for smaller screens */
