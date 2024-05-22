@@ -24,16 +24,10 @@ function generateDealCards(deals) {
 
         var details = document.createElement('div');
         details.className = 'deal-details';
-        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p>`;
-
-        var moreDetails = document.createElement('a');
-        moreDetails.className = 'more-details';
-        moreDetails.href = deal.link;
-        moreDetails.innerText = 'المزيد';
+        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p><a href="${deal.link}" class="more-details">المزيد</a>`;
 
         card.appendChild(img);
         card.appendChild(details);
-        card.appendChild(moreDetails);
         container.appendChild(card);
     });
 }

@@ -34,15 +34,10 @@ function generateSlides(deals) {
 
         var details = document.createElement('div');
         details.className = 'deal-details';
-        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p>`;
-
-        var moreDetails = document.createElement('span');
-        moreDetails.className = 'more-details';
-        moreDetails.innerText = 'المزيد';
+        details.innerHTML = `<h3>${deal.destination}</h3><p>${deal.hotel}</p><p>${deal.price}</p><a href="${deal.link}" class="more-details">المزيد</a>`;
 
         link.appendChild(img);
         link.appendChild(details);
-        link.appendChild(moreDetails);
         slide.appendChild(link);
         wrapper.appendChild(slide);
     });
