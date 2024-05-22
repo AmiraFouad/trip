@@ -20,7 +20,9 @@ body {
 
 /* banners */
 .home-banner,
-.about-banner {
+.about-bannerو
+contact-bannerو
+deals-banner {
   position: relative;
   width: 100%;
   max-width: 100%;
@@ -28,7 +30,9 @@ body {
 }
 
 .home-banner img,
-.about-banner img {
+.about-banner img,
+.contact-banner img,
+deals-banner img {
   display: block;
   width: 100%;
   height: auto;
