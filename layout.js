@@ -34,7 +34,7 @@ function insertNavbar() {
 // Function to insert the footer
 function insertFooter() {
     const footerContent = `
-        <footer class="footer bg-light text-center">
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
