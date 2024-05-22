@@ -19,14 +19,16 @@ body {
 }
 
 /* banners */
-.home-banner .about-banner {
+.home-banner,
+.about-banner {
   position: relative;
   width: 100%;
   max-width: 100%;
   margin: auto;
 }
 
-.home-banner img {
+.home-banner img,
+.about-banner img {
   display: block;
   width: 100%;
   height: auto;
