@@ -4,27 +4,27 @@
         "destination": "شرم الشيخ",
         "hotel": "انتركونتننتال",
         "price": "بـ 250 جنيه",
-        "link": "deals\\deal1.html"
+        "link": "deal1.html"
     },
     {
         "image": "media\\Hurghada.jpg",
         "destination": "الغردقه",
         "hotel": "تيوليب",
         "price": "بـ 300 جنيه",
-        "link": "deals\\deal2.html"
+        "link": "deal2.html"
     },
     {
         "image": "media\\Safari.jpg",
         "destination": "سفاري",
         "hotel": "جبل سانت كاترين",
         "price": "بـ 300 جنيه",
-        "link": "deals\\deal3.html"
+        "link": "deal3.html"
     },
     {
         "image": "media\\Aswan.jpg",
         "destination": "اسوان",
         "hotel": "ماريوت",
         "price": "بـ 500 جنيه",
-        "link": "deals\\deal4.html"
+        "link": "deal4.html"
     }
 ]
